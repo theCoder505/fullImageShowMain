@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+
+    
+    <button onclick="openFullscreen();">Open Video in Fullscreen Mode</button>
+
+
+        <img src="Images/FOUNDERMAIN.jpg" onclick="openFullscreen();" alt="Loading Image..." id="showFullImg" 
+        style="width: 100%; height: auto;">
+
+
+    <script>
+        var elem = document.getElementById("showFullImg");
+        function openFullscreen() {
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen();
+            } else if (elem.webkitRequestFullscreen) { /* Safari */
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) { /* IE11 */
+                elem.msRequestFullscreen();
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
